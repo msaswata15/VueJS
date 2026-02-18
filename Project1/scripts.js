@@ -28,7 +28,7 @@ var products = [
         "name": "Fries",
         "price": 2.99,
         "active": false,
-        "quantity": 1,
+        "quantity": 1   ,
         "stock": 10
     },
     {
@@ -44,7 +44,7 @@ var products = [
         "name": "Salad",
         "price": 2.79,
         "active": false,
-        "quantity": 1,
+        "quantity": 1   ,
         "stock": 10
     },
     {
@@ -78,7 +78,19 @@ const SelfServiceMachine={
         return{
             products:window.products
         }
-    }
+    },
+    methods:{
+        total:function(){
+            var total=0;
+            for(var i=0;i<this.products.length;i++){
+                if (this.products[i].active){
+                    total+=this.products[i].quantity*this.products[i].price;
+                }
+
+        }
+        return total;
+    }}
+
 
 
 };
