@@ -29,3 +29,13 @@ Vue.createApp({
     }
   }
 }).mount('#app');
+
+var products=[
+
+];
+
+const SelfServiceMachine={};
+
+Vue.createApp(SelfServiceMachine).mount({
+
+})
